@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=1024, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <style>
+        fieldset {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+	<h1> Profile edit page </h1>
+	<form action="formdata.php" method="post" name="form-name">
+	    <fieldset>
+	        <legend> Basic info</legend>
+	        <p>
+	        	<label for="id"> ID </label>
+	        	<input type="text" name="id" disabled value="725" size="50">
+	        </p>
+	        <p>
+	        	<label for="firstname"> First Name </label>
+	        	<input type="text" name="firstname" maxlength="25" size="50">
+	        </p>
+	        <p>
+	        	<label for="lastname"> Last Name </label>
+	        	<input type="text" name="lastname" maxlength="25" size="50">
+	        </p>
+	        <p>
+	        	<label for="password"> Password </label>
+	        	<input type="password" maxlength="25" name="password" size="50">
+	        </p>
+	        <p>
+	        	<label for="tel"> Phone </label>
+	        	<input type="tel" name="tel" placeholder="380" size="50">
+	        </p>
+	        <p>
+	        	<label for="email-address"> Email </label>
+	        	<input type="email" name="email-address" placeholder="myemail@placeholder.com" size="50">
+	        </p>
+	        <p>
+	        	<input type="checkbox" name="checkbox" >
+	        	<label for="checkbox">Keep my email address private<br></label> 
+	            We'll remove your public profile email and use <br>
+	            11978331+username@users.norepli.localhost
+	        </p>
+	        <p>
+	        	<label for="birthday-date"> DOB </label>
+	        	<input type="date" name="birthday-date">
+	        </p>
+	        <p>
+	        	<label for="site"> Blog url </label>
+	        	<input type="url" name="site" placeholder="http://" size="50">
+	        </p>
+	        <p>
+	        	<label for="textabout"> About Me </label>
+	        	<textarea name="textabout" rows="5" cols="50"></textarea>
+	        </p>
+	        <p>
+	        	<label for="yourFile"> Profile picture </label>
+	        	<input type="file" name="yourFile" accept=".jpg, .jpeg, .png">
+	        </p>
+	    </fieldset>
+	    <br>
+	    <fieldset>
+	        <legend>Professional info</legend>
+	        <p>
+	        	<label for="study">Desire to study</label>
+	        	<input type="range" name="study" min="0" max="100" step="1" value="75">
+	        </p>
+	        <p>
+	        	<label for="experience">Experience</label> 
+                <input type="number" id="experience" value="3"> years
+                    
+	        </p>
+	        </p>
+	        <p> Development Experience <br>
+	            <label><input type="radio" name="experience" value="Learning"> Learning to Program </label><br>
+	            <label><input type="radio" name="experience" value="Junior" checked> Junior Developer </label><br>
+	            <label><input type="radio" name="experience" value="Mid-Level"> Mid-Level Developer </label><br>
+	            <label><input type="radio" name="experience" value="Senior"> Senior Developer </label><br>
+	        <p>
+	        	Country
+	        	<select name="yourCountry">
+	        		<option disabled> Choose Your Country</option>
+		            <option value="UK"> Ukraine</option>
+		            <option value="USA"> USA</option>
+		            <option value="THA"> Thailand</option>
+		            <option value="SPA"> Spain</option>
+	       		</select>
+	        </p>
+	        <p>
+	        	Skills<br>
+	        	<label><input type="checkbox" value="HTML" checked> HTML </label><br>
+	            <label><input type="checkbox" value="CCS"> CCS </label><br>
+	            <label><input type="checkbox" value="g"> JavaScript </label><br>
+	            <label><input type="checkbox" value="p"> R </label><br>
+	            <label><input type="checkbox" value="g"> Scala </label><br>
+	            <label><input type="checkbox" value="p"> Haskell </label><br>
+	        </p>
+	    </fieldset>
+	    <input type="hidden" name="#" value="#">
+        <button type="reset">Cancel</button>
+        <button type="submit">Submit</button>
+	</form>
+</body>
+</html>
