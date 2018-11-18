@@ -3,329 +3,343 @@
 
 <head>
 	<title>Theathe</title>
-	<style>
+	<style type="text/css">
 		h1 {
-            font-size: 0;
-        }
+			font-size: 0;
+		}
 
-        .logo {
-            margin: 3px 5px 3px 0;
-        }
+		.logo {
+			margin: 3px 5px 3px 0;
+		}
 
-        header p {
-            margin: auto 7px auto 7px;
-        }
+		.header-text {
+			margin: auto 7px auto 7px;
+		}
 
-        header {
-            display: flex;
-            justify-content: center;
-            background-image: linear-gradient(to left, #bf1e2e, #f1592a);
-        }
+		.header {
+			display: flex;
+			justify-content: center;
+			background-image: linear-gradient(to left, #bf1e2e, #f1592a);
+		}
 
-        .header-a {
-            padding: 29px 6px 30px 6px;
-            color: white;
-            text-transform: uppercase;
+		.header-a {
+			padding: 29px 6px 30px 6px;
+			color: white;
+			text-transform: uppercase;
 
-        }
+		}
 
-        .header-a:link, .header-a:visited, .header-a:active {
-            text-decoration: none;
-        }
+		.header-a:link,
+		.header-a:visited,
+		.header-a:active {
+			text-decoration: none;
+		}
 
-        .header-a:hover {
-            text-decoration: none;
-            color: black;
-            background-color: whitesmoke;
-        }
+		.header-a:hover {
+			text-decoration: none;
+			color: black;
+			background-color: whitesmoke;
+		}
 
-        .lang {
-            margin-left: 30px;
-            background-color: transparent;
-            color: white;
-            border: none;
-        }
+		.lang {
+			margin-left: 30px;
+			background-color: transparent;
+			color: white;
+			border: none;
+		}
 
-        .poster {
-            z-index: 1;
-        }
+		.poster {
+			z-index: 1;
+		}
 
-        .poster div a {
-            text-decoration: none;
-        }
+		.poster div a {
+			text-decoration: none;
+		}
 
-        .block-of-performances {
-            position: relative;
-            top: -140px;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            font-weight: lighter;
-            z-index: 2;
-        }
+		.block-of-performances {
+			position: relative;
+			top: -140px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			font-weight: lighter;
+			z-index: 2;
+		}
 
-        .arrow {
-            font-weight: lighter;
-            margin-left: 5px;
-            margin-right: 5px;
-            width: 36px;
-            height: 36px;
-            line-height: 36px;
-            text-align: center;
-            vertical-align: middle;
-            background: #505050;
-            color: white;
-            border-radius: 5px;
-        }
+		.arrow {
+			font-weight: lighter;
+			margin-left: 5px;
+			margin-right: 5px;
+			width: 36px;
+			height: 36px;
+			line-height: 36px;
+			text-align: center;
+			vertical-align: middle;
+			background: #505050;
+			color: white;
+			border-radius: 5px;
+		}
 
-        .arrow:hover {
-            background: #E14927;
-        }
+		.arrow:hover {
+			background: #E14927;
+		}
 
-        .performance-date {
-            margin: 0 1px 0 1px;
-            width: 92px;
-            height: 92px;
-            background: #4F4F4F;
-            background: radial-gradient(circle at top left, transparent 15px, #4F4F4F 0) top left,
-            radial-gradient(circle at top right, transparent 15px, #4F4F4F 0) top right,
-            radial-gradient(circle at bottom right, transparent 15px, #4F4F4F 0) bottom right,
-            radial-gradient(circle at bottom left, transparent 15px, #4F4F4F 0) bottom left;
-            background-size: 50% 50%;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
+		.performance-date {
+			margin: 0 1px 0 1px;
+			width: 92px;
+			height: 92px;
+			background: #4F4F4F;
+			background: radial-gradient(circle at top left, transparent 15px, #4F4F4F 0) top left,
+				radial-gradient(circle at top right, transparent 15px, #4F4F4F 0) top right,
+				radial-gradient(circle at bottom right, transparent 15px, #4F4F4F 0) bottom right,
+				radial-gradient(circle at bottom left, transparent 15px, #4F4F4F 0) bottom left;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: white;
+		}
 
-        .number-performance-date {
-            font-weight: normal;
-            font-size: xx-large;
-            margin: -18px 0 -12px 0;
-            border-bottom: 1px solid white;
-        }
+		.number-performance-date {
+			font-weight: normal;
+			font-size: xx-large;
+			margin: -18px 0 -12px 0;
+			border-bottom: 1px solid white;
+		}
 
-        .selected-date {
-            width: 464px;
-            height: 92px;
-            background: #E14927;
-            background: radial-gradient(circle at top left, transparent 15px, #E14927 0) top left,
-            radial-gradient(circle at top right, transparent 15px, #E14927 0) top right,
-            radial-gradient(circle at bottom right, transparent 15px, #E14927 0) bottom right,
-            radial-gradient(circle at bottom left, transparent 15px, #E14927 0) bottom left;
-            background-size: 50% 50%;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            color: white;
-            padding: 20px;
-        }
+		.selected-date {
+			width: 464px;
+			height: 92px;
+			background: #E14927;
+			background: radial-gradient(circle at top left, transparent 15px, #E14927 0) top left,
+				radial-gradient(circle at top right, transparent 15px, #E14927 0) top right,
+				radial-gradient(circle at bottom right, transparent 15px, #E14927 0) bottom right,
+				radial-gradient(circle at bottom left, transparent 15px, #E14927 0) bottom left;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			display: flex;
+			flex-direction: column;
+			color: white;
+			padding: 20px;
+		}
 
-        h4 {
-            font-size: xx-large;
-            margin: -8px 0 0 0;
-        }
+		.title-of-perfomance {
+			font-size: xx-large;
+			margin: -8px 0 0 0;
+		}
 
-        .info-ticket {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+		.info-ticket {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 
-        .info-ticket div p {
-            margin: 11px 0px -11px 0px;
-        }
+		.info-ticket div p {
+			margin: 11px 0px -11px 0px;
+		}
 
-        .buy-ticket-button {
-            padding: 5px;
-            line-height: 1.5em;
-            background: #4F4F4F;
-            text-align: center;
-            border-radius: 5px;
-            text-transform: uppercase;
-        }
+		.buy-ticket-button {
+			padding: 5px;
+			line-height: 1.5em;
+			background: #4F4F4F;
+			text-align: center;
+			border-radius: 5px;
+			text-transform: uppercase;
+		}
 
-        .block-of-performances div:nth-child(4) {
-            background: #E14927;
-            background: #E14927;
-            background: radial-gradient(circle at top left, transparent 15px, #E14927 0) top left,
-            radial-gradient(circle at top right, transparent 15px, #E14927 0) top right,
-            radial-gradient(circle at bottom right, transparent 15px, #E14927 0) bottom right,
-            radial-gradient(circle at bottom left, transparent 15px, #E14927 0) bottom left;
-            background-size: 50% 50%;
-            background-repeat: no-repeat;
-        }
+		.buy-ticket-button a {
+			color: white;
+			text-decoration: none;
+		}
 
-        nav {
-            font-size: 18px;
-            margin: 20px 100px 0 150px;
-            width: 17%;
-        }
+		.block-of-performances div:nth-child(4) {
+			background: #E14927;
+			background: #E14927;
+			background: radial-gradient(circle at top left, transparent 15px, #E14927 0) top left,
+				radial-gradient(circle at top right, transparent 15px, #E14927 0) top right,
+				radial-gradient(circle at bottom right, transparent 15px, #E14927 0) bottom right,
+				radial-gradient(circle at bottom left, transparent 15px, #E14927 0) bottom left;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+		}
 
-        .nav-left {
-            text-decoration: none;
-            color: black;
-        }
+		nav {
+			font-size: 18px;
+			margin: 20px 100px 0 150px;
+			width: 17%;
+		}
 
-        .nav-left:link, .nav-left:visited, .nav-left:active {
-            text-decoration: none;
-        }
+		.nav-left {
+			text-decoration: none;
+			color: black;
+		}
 
-        .nav-left:hover {
-            text-decoration: none;
-            color: red;
-        }
+		.nav-left:link,
+		.nav-left:visited,
+		.nav-left:active {
+			text-decoration: none;
+		}
 
-        img {
-        	max-width: 100%;
-            padding-right: 5px;
-        }
+		.nav-left:hover {
+			text-decoration: none;
+			color: red;
+		}
 
-        main {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-         main div section {
-            box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-            color: gray;
-        }
+		img {
+			max-width: 100%;
+		}
 
-        main div section img {
-            align-items: right;
-        }
+		.main {
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
 
-        .date-and-views {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 10px;
-            font-size: smaller;
-            padding: 0 7px 0 7px;
-            margin: -15px 5px 0px 0px;
-            opacity: 0.6;
-        }
-        .eye {
-            margin: -10px 0px -7px 0;
-        }
+		.news {
+			box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+			border-radius: 5px;
+			color: gray;
+			margin: 0 139px 40px 0px;
 
-        h2 {
-            color: #E14827;
-            font-size: 30px;
-        }
+		}
 
-        h3 {
-            font-size: 22px;
-						margin: 0 5px 0 0;
-        }
+		.news img {
+			align-items: right;
+		}
 
-        main section {
-            margin: 0 139px 40px 0px;
-        }
+		.date-and-views {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 10px;
+			font-size: smaller;
+			padding: 0 7px 0 7px;
+			margin: -15px 5px 0px 0px;
+			opacity: 0.6;
+		}
 
-        .news-block {
-            text-decoration: none;
-            color: black;
-            display: block;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+		.eye {
+			margin: -10px 0px -7px 0;
+		}
 
-        }
+		.h2 {
+			color: #E14827;
+			font-size: 30px;
+		}
 
-        .news-block:link, .news-block:visited, .news-block:active {
-            text-decoration: none;
-        }
+		.h3 {
+			font-size: 22px;
+			margin: 0 5px 0 0;
+		}
 
-        .news-block:hover {
-            text-decoration: none;
-            color: gray;
-        }
+		.news-block {
+			text-decoration: none;
+			color: black;
+			display: block;
+			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 
-        .content {
-            display: flex;
-            margin: -110px 0 0 0;
-        }
+		}
 
-        aside div a,aside div video {
-            margin: 0px 74px 0px 0px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
-        }
+		.news-block:link,
+		.news-block:visited,
+		.news-block:active {
+			text-decoration: none;
+		}
 
-        .gallery{
-        	text-decoration: none;
-            color: black;
-            display: block;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
+		.news-block:hover {
+			text-decoration: none;
+			color: gray;
+		}
 
-        footer {
-            border-top: 4px solid orangered;
-            margin: 0 0 50px 0;
-        }
+		.content {
+			display: flex;
+			margin: -110px 0 0 0;
+		}
 
-        .footer_left {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0 0 200px;
-        }
+		aside div a,
+		aside div video {
+			margin: 0px 74px 0px 0px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+		}
 
-        .footer_right {
-            margin-left: 200px;
-        }
+		.gallery {
+			text-decoration: none;
+			color: black;
+			display: block;
+			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+			text-align: center;
+		}
 
-        .footer_img {
-            width: 20px;
-            height: 20px;
-            opacity: 0.5;
-        }
+		.footer {
+			border-top: 4px solid orangered;
+			margin: 0 0 50px 0;
+		}
 
-        .footer_img:hover {
-            opacity: 1;
-        }
+		.footer_left {
+			display: flex;
+			justify-content: center;
+			margin: 20px 0 0 200px;
+		}
 
-        .footer_a {
-            text-decoration: none;
-            color: grey;
-            margin-right: 10px;
-            text-transform: uppercase;
-        }
+		.footer_right {
+			margin-left: 200px;
+		}
 
-        .footer_a:active , .footer_a:visited , .footer_a:link {
-            text-decoration: none;
-        }
+		.footer_img {
+			width: 20px;
+			height: 20px;
+			opacity: 0.5;
+		}
 
-        .footer_a:hover {
-            text-decoration: none;
-            color: red;
-        }
+		.footer_img:hover {
+			opacity: 1;
+		}
 
-        .selected-date div img {
-            margin: -48px 0 0 0;
-            width: 9%;
-        }
-        .scroll-up {
-        	text-align: center;
-        	font-size: xx-large;
-        	align-items: center;
-        	width: 30px;	
-        	text-decoration: none;
-        	margin:-57px -108px 44px 93px;
-        	color: white;
-        	background-color: #e14927;
-        	border-radius: 5px
-        }        
+		.footer_a {
+			text-decoration: none;
+			color: grey;
+			margin-right: 10px;
+			text-transform: uppercase;
+		}
 
-    </style>
+		.footer_a:active,
+		.footer_a:visited,
+		.footer_a:link {
+			text-decoration: none;
+		}
+
+		.footer_a:hover {
+			text-decoration: none;
+			color: red;
+		}
+
+		.selected-date div img {
+			margin: -48px 0 0 0;
+			width: 9%;
+		}
+
+		.scroll-up {
+			text-align: center;
+			font-size: xx-large;
+			align-items: center;
+			width: 30px;
+			text-decoration: none;
+			margin: -57px -108px 44px 93px;
+			color: white;
+			background-color: #e14927;
+			border-radius: 5px
+		}
+
+	</style>
 
 </head>
 
 <body>
-	<header>
+	<header class="header">
 		<h1>Театр ім. Т.Г.Шевченка <a href="#"><img class="logo" src="img/log.png" alt="logo"></a></h1>
 		<p class="header-text"><a class="header-a" href="#">Головна</a>
 			<a class="header-a" href="#">Афіша</a>
@@ -345,12 +359,12 @@
 	<div class="poster">
 		<img src="img/picture.png" alt="poster">
 		<div class="block-of-performances">
-			<a href="#" class="arrow"><</a>
-				<div class="performance-date">
+			<a href="#" class="arrow">
+				<</a> <div class="performance-date">
 					<p>Нд</p>
 					<p class="number-performance-date">21</p>
 					<p>лютого</p>
-			  </div>
+		</div>
 		<div class="performance-date">
 			<p>Пн</p>
 			<p class="number-performance-date">22</p>
@@ -362,7 +376,7 @@
 			<p>лютого</p>
 		</div>
 		<div class="selected-date">
-			<h4>Сад гетсиманський</h4>
+			<h4 class="title-of-perfomance">Сад гетсиманський</h4>
 			<br>
 			<div class="info-ticket">
 				<div>
@@ -370,7 +384,7 @@
 					<p>Тривалість вистави 2 год 20 хв.</p>
 				</div>
 				<div class="buy-ticket-button">
-					купити квиток
+					<a href="#">купити квиток</a>
 				</div>
 				<img src="img/invalid-name.png">
 			</div>
@@ -387,7 +401,7 @@
 		</div>
 		<a class="arrow">></a>
 	</div>
-	
+
 	<div class="content">
 		<nav>
 			<table class="nav_table">
@@ -414,76 +428,62 @@
 			</table>
 		</nav>
 
-		<main>
+		<main class="main">
 			<div>
-				<h2>Новини</h2>
-				<section>
+				<h2 class="h2">Новини</h2>
+				<section class="news">
 					<a class="news-block" href="#">
 						<img src="img/news.png" alt="News">
-						<h3>Назва новини</h3>
-						<p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.
-					 </p>
-				</a>
-					<div class="date-and-views">
-						<p>12.02.2015</p>
-						<p><img class="eye" src="img/eye.png" alt="viewed:" class="">112</p>
-					</div>
-				</section>
-				<section>
-					<a class="news-block" href="#">
-						<img src="img/news.png" alt="News">
-						<h3>Назва новини</h3>
+						<h3 class="h3">Назва новини</h3>
 						<p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 							eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.
 						</p>
-				</a>
+					</a>
 					<div class="date-and-views">
 						<p>12.02.2015</p>
-						<p><img class="eye" src="img/eye.png" alt="viewed:" class="">112</p>
+						<p><img class="eye" src="img/eye.png" alt="viewed:">112</p>
 					</div>
 				</section>
-				<section>
+				<section class="news">
 					<a class="news-block" href="#">
 						<img src="img/news.png" alt="News">
-						<h3>Назва новини</h3>
+						<h3 class="h3">Назва новини</h3>
 						<p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 							eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.
 						</p>
-				</a>
+					</a>
 					<div class="date-and-views">
 						<p>12.02.2015</p>
-						<p><img class="eye" src="img/eye.png" alt="viewed:" class="">112</p>
+						<p><img class="eye" src="img/eye.png" alt="viewed:">112</p>
 					</div>
 				</section>
-				<section>
+				<section class="news">
 					<a class="news-block" href="#">
 						<img src="img/news.png" alt="News">
-						<h3>Назва новини</h3>
+						<h3 class="h3">Назва новини</h3>
 						<p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 							eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.
 						</p>
-				</a>
+					</a>
 					<div class="date-and-views">
 						<p>12.02.2015</p>
-						<p><img class="eye" src="img/eye.png" alt="viewed:" class="">112</p>
+						<p><img class="eye" src="img/eye.png" alt="viewed:">112</p>
 					</div>
 				</section>
 			</div>
 		</main>
 		<aside>
 			<div>
-				<h2>Галерея</h2>
+				<h2 class="h2">Галерея</h2>
 				<a class="gallery" href="#"><img src="img/gallery.png" alt="Gallery">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
 				</a>
 			</div>
 			<div>
-				<h2>Відео</h2>
+				<h2 class="h2">Відео</h2>
 				<div>
 					<video controls poster="img/poster.png">
 						<source src="#" type="video/mp4">
@@ -494,7 +494,7 @@
 			</div>
 		</aside>
 	</div>
-	<footer>
+	<footer class="footer">
 		<div class="footer_left">
 			<div>
 				<a class="footer_a" href="#">Головна</a>
