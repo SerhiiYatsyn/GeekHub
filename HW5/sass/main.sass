@@ -1,0 +1,470 @@
+$var1: #ffffff
+$var2: #eb402c
+$var3: #363636
+$var4: #808080
+$var5: #d90647
+$var6: #e0e0e0
+$var7: #667386
+$var8: #ffffff
+$var9: #f8f8f8
+
+* 
+	font-family: 'Lato', sans-serif
+	margin: 0
+	padding: 0
+
+.start 
+	position: relative
+	width: 100%
+	&-centre-text 
+		font-size: 4.5vw
+		position: absolute
+		top: 24%
+		left: 15%
+		color: white
+		margin: 0.6%
+	
+
+.logo 
+	font-size: 5vw
+	position: absolute
+	top: 1%
+	left: 8%
+	color: $var1
+
+a 
+	text-decoration: none
+
+.h-log 
+	color: white
+
+.red 
+	color: red
+	&-dot 
+		color: $var5
+	
+
+.hidden 
+	display: none
+	&2 
+		display: none
+	
+
+.menu 
+	position: absolute
+	top: 1.85vw
+	right: 3.7vw
+	font-size: 1.33vw
+	&-mobile 
+		position: absolute
+		top: 1.85vw
+		right: 3.7vw
+		font-size: 5vw
+		cursor: pointer
+		color: aliceblue
+	
+	&-mobile 
+		display: block
+	
+
+.active, .accordion:hover 
+	background-color: crimsonx
+
+ul.menu li 
+	display: inline
+	text-transform: uppercase
+	font-size: large
+	margin: 0 25px 0 0
+	a 
+		color: white
+		text-decoration: none
+		&:hover 
+			text-decoration: line-through
+		
+	
+
+.text 
+	position: absolute
+	margin: -25.4% 0 0 16%
+	color: white
+	font-size: 1.2vw
+
+.download-button 
+	position: absolute
+	margin: -22% 0% 0% 16%
+	height: 8%
+	width: 18%
+	background-color: $var1
+	border-radius: 25px
+	align-items: center
+	display: flex
+	justify-content: center
+	color: $var2
+	font-size: 1.5vw
+	font-weight: 700
+
+.rectangle 
+	max-width: 100%
+
+.iphone1-img 
+	position: absolute
+	top: 19%
+	right: 15%
+	width: 25%
+
+.easy-messaging 
+	display: flex
+	&-info 
+		width: 40%
+		margin: 23% 0 0 5%
+		h2 
+			font-size: 3vw
+			font-weight: 900
+			color: $var3
+		
+		p 
+			color: $var4
+			line-height: 1.78
+			font-size: 18px
+			font-size: 1.5vw
+		
+	
+
+.message-img 
+	margin: 2.1% 0px 0px 4.2%
+	padding: 0
+	width: 28%
+	height: 80%
+
+.conversation-img 
+	margin: 8.5% 0px -8% -20%
+	width: 28%
+	height: 80%
+
+.people-section 
+	margin-top: 7vw
+	&-title 
+		align-self: center
+	
+	ul 
+		list-style-type: none
+	
+
+.reviews 
+	display: flex
+	justify-content: space-between
+	align-self: center
+	&-title 
+		font-weight: 700
+		font-size: 1.5vw
+		margin-left: 7%
+		a 
+			color: $var2
+		
+	
+	&-title 
+		font-size: 1.5vw
+	
+	&-title 
+		font-size: 2.5vw
+		margin-left: 4%
+	
+	&-title 
+		font-size: 2.5vw
+		margin-left: 4%
+	
+
+.blockquote 
+	position: relative
+	width: 27vw
+	height: 15.5vw
+	border: 1px solid $var6
+	font-style: italic
+	&-text 
+		height: 8.5vw
+		margin: 7% 10% 8% 8%
+		width: 82.5%
+	
+	&-text 
+		height: 9vw
+		margin: 7% 10% 2% 8%
+		width: 92.5%
+	
+	&-text 
+		height: 10vw
+		margin: 2% 10% 1% 3%
+	
+	&-center 
+		box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.25)
+		border: 1px solid $var1
+	
+
+.review 
+	display: flex
+	flex-direction: column
+	&-author 
+		margin-top: 40px
+	
+	&-center 
+		display: block
+	
+	&-center 
+		margin-top: -30px
+	
+
+.ceo 
+	text-transform: uppercase
+	color: $var7
+	&-icon 
+		border-radius: 50%
+		float: left
+		margin: 30px 19px 0 0
+	
+
+media screen and (max-width: 1024px) 
+	display: none
+
+.blockquote 
+	position: relative
+	width: 42vw
+	height: 15vw
+	border: 1px solid $var6
+	font-style: italic
+
+.reviews 
+	justify-content: center
+
+media screen and (max-width: 768px) 
+	display: none
+
+.blockquote 
+	position: relative
+	width: 84vw
+	height: 16vw
+	border: 1px solid $var6
+	font-style: italic
+
+.menu 
+	top: 7vw
+	right: 1vw
+
+.n 
+	display: block
+	font-size: 2vw
+	margin-bottom: -1.5vw
+
+media screen and (max-width: 568px) 
+	height: 15vw
+	margin: 2% 10% 2% 3%
+
+.blockquote 
+	position: relative
+	width: 84vw
+	height: 25vw
+	border: 1px solid $var6
+	font-style: italic
+
+.contacts-screen 
+	margin: 11% 0 0 9%
+	z-index: 1
+	width: 28%
+	height: 45vw
+
+.groups-screen 
+	margin: 5.5% 0 11% -11%
+	width: 22.5%
+	height: 40vw
+
+.people 
+	display: flex
+	flex-direction: row
+	justify-content: center
+
+.review 
+	margin-left: 30px
+	margin-top: 128px
+
+.info 
+	background-image: linear-gradient(to top, $var2, $var5)
+	height: 38.2vw
+	display: flex
+	justify-content: center
+	margin-top: 11vw
+	p 
+		padding: 0 7.4vw 0 8.52vw
+		img 
+			margin-top: -6.2vw
+			width: 31.5vw
+		
+	
+	.left dt 
+		font-size: 1.6vw
+		font-weight: 700
+		text-align: right
+		color: $var1fff
+	
+	.left dd 
+		opacity: 0.6
+		text-align: right
+		color: rgba(255, 255, 255, 0.6)
+		margin: 0 -1vw 40% 0
+		font-size: 1.17vw
+	
+	.left 
+		width: 16.4vw
+		margin-top: 9vw
+	
+	.right 
+		margin-top: 9vw
+		dt 
+			font-size: 1.6vw
+			font-weight: 700
+			text-align: left
+			color: $var1fff
+		
+		dd 
+			opacity: 0.6
+			text-align: left
+			color: rgba(255, 255, 255, 0.6)
+			margin: 0 -1vw 6.666vw 0
+			font-size: 1.17vw
+		
+	
+	.right 
+		width: 16.57vw
+		margin-top: 8.888vw
+	
+
+.left img 
+	position: absolute
+	margin: -2.4vw 0 0 20vw
+	width: 3.5vw
+
+.right img 
+	position: absolute
+	margin: -0.75vw 0 0 -7.33vw
+	width: 3.5vw
+
+.tran 
+	position: absolute
+	width: 21.5vw
+
+.button-play 
+	position: absolute
+	margin-top: 17.26vw
+	width: 3.5vw
+
+.subscribe-download 
+	margin-top: 15%
+	text-align: center
+	border-bottom: 1px solid $var6
+	.subscribe-form 
+		height: 3.7vw
+		width: 42.3vw
+		background-color: $var9
+		border-radius: 1.85vw
+		display: flex
+		margin-bottom: 10.9vw
+		margin-top: 5.19vw
+		margin-left: 30vw
+	
+	.mail 
+		height: 3.7vw
+		width: 29vw
+		padding-left: 2.29vw
+		background-color: transparent
+		border-radius: 1.185vw
+		border: none
+		outline: none
+		font-size: 1.33vw
+		font-weight: 400
+	
+	.button-subscribe 
+		height: 3.8vw
+		width: 13.3vw
+		background: linear-gradient(to bottom, $var5, $var2)
+		border-radius: 1.85vw
+		border: 0
+		color: $var1
+		font-size: 1.33vw
+		font-weight: 700
+		cursor: pointer
+	
+
+.h2 
+	font-size: 3vw
+	font-weight: 900
+	color: $var3
+	text-align: center
+
+.description 
+	color: $var4
+	margin-top: 1.48vw
+	text-align: center
+	font-size: 1.45vw
+
+.subscribe-form 
+	margin-top: 3.7vw
+
+.h-logo 
+	text-align: center
+	margin-bottom: 3.7vw
+	&-img 
+		width: 16.3%
+	
+
+.download 
+	margin-top: 5.926vw
+	border-bottom: 1px solid $var6
+
+.appstore-logo 
+	text-align: center
+	margin-top: 5vw
+	margin-bottom: 10vw
+	&-img 
+		width: 14vw
+		height: 4.5vw
+	
+
+.footer 
+	display: flex
+	&-menu 
+		margin: 1.85vw 0
+		margin-left: 11.1vw
+		a 
+			display: inline-block
+			text-decoration: none
+			margin-right: 1.85vw
+		
+	
+	a 
+		text-decoration: none
+		color: $var3
+		text-transform: uppercase
+		height: 1.185vw
+		font-size: 1.33vw
+		line-height: 1.56
+		&:hover 
+			text-decoration: line-through
+		
+	
+
+.select-lang 
+	border: none
+	border-radius: 50px
+	height: 2.96vw
+	padding-left: 1.85vw
+	background-color: $var9
+	position: absolute
+	margin-top: 15px
+	right: 4.44vw
+	background-image: url("img
+	background-position: 8.52vw
+	background-repeat: no-repeat
+	cursor: pointer
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	width: 11.1vw
+	font-size: 1.2vw
+
