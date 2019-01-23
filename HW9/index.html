@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/script.js"></script>
+    <title>HW3</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Театр ім. Т.Г.Шевченка <a href="#"><img class="logo" src="images/log.png" alt="logo"></a></h1>
+        <p class="header-text"><a class="header-a" href="#">Головна</a>
+            <a class="header-a" href="#">Афіша</a>
+            <a class="header-a" href="#">Репертуар</a>
+            <a class="header-a" href="#">Новини</a>
+            <a class="header-a" href="#">Про театр</a>
+            <a class="header-a" href="#">Персоналії</a>
+            <a class="header-a" href="#">Контакти</a>
+            <a class="header-a" href="#">Фестивалі</a>
+        </p>
+        <select class="lang" name="lang">
+            <option selected>УКР</option>
+            <option>РУС</option>
+            <option>ENG</option>
+        </select>
+    </header>
+
+    <div id="slider" class="slider">
+        <div class="slider_images">
+            <img src="images/slider/0.jpg" alt="slider" class="slider_image">
+            <img src="images/slider/1.jpg" alt="slider" class="slider_image">
+            <img src="images/slider/2.jpg" alt="slider" class="slider_image">
+            <img src="images/slider/3.jpg" alt="slider" class="slider_image">
+            <img src="images/slider/4.jpg" alt="slider" class="slider_image">
+        </div>
+        <div class="slider_items">
+            <button id="prev" class="slider_button prev" type="button"></button>
+            <div class="slider_item">
+                <div class="data data-info_active">
+                    <p class="data-day">Нд</p>
+                    <p class="data-number">21</p>
+                    <p class="data-month">Лютого</p>
+                </div>
+                <div class="data-info item-active">
+                    <div class="data-info_content">
+                        <h2 class="data-info_head">Сад гетсиманський</h2>
+                        <p class="data-info_text">Народна трагедія на 2 дії</p>
+                        <p class="data-info_text">Тривалість вистави 2 год 20 хв.</p>
+                    </div>
+                    <button class="data-info_button" type="button">купити квиток</button>
+                    <img class="data-kod" src="images/slider/kod.png" alt="kod">
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="data">
+                    <p class="data-day">Пн</p>
+                    <p class="data-number">22</p>
+                    <p class="data-month">Лютого</p>
+                </div>
+                <div class="data-info">
+                    <div class="data-info_content">
+                        <h2 class="data-info_head">Сад гетсиманський</h2>
+                        <p class="data-info_text">Народна трагедія на 2 дії</p>
+                        <p class="data-info_text">Тривалість вистави 2 год 20 хв.</p>
+                    </div>
+                    <button class="data-info_button" type="button">купити квиток</button>
+                    <img class="data-kod" src="images/slider/kod.png" alt="kod">
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="data">
+                    <p class="data-day">Пн</p>
+                    <p class="data-number">22</p>
+                    <p class="data-month">Лютого</p>
+                </div>
+                <div class="data-info">
+                    <div class="data-info_content">
+                        <h2 class="data-info_head">Сад гетсиманський</h2>
+                        <p class="data-info_text">Народна трагедія на 2 дії</p>
+                        <p class="data-info_text">Тривалість вистави 2 год 20 хв.</p>
+                    </div>
+                    <button class="data-info_button" type="button">купити квиток</button>
+                    <img class="data-kod" src="images/slider/kod.png" alt="kod">
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="data">
+                    <p class="data-day">Чт</p>
+                    <p class="data-number">25</p>
+                    <p class="data-month">Лютого</p>
+                </div>
+                <div class="data-info">
+                    <div class="data-info_content">
+                        <h2 class="data-info_head">Сад гетсиманський</h2>
+                        <p class="data-info_text">Народна трагедія на 2 дії</p>
+                        <p class="data-info_text">Тривалість вистави 2 год 20 хв.</p>
+                    </div>
+                    <button class="data-info_button" type="button">купити квиток</button>
+                    <img class="data-kod" src="images/slider/kod.png" alt="kod">
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="data">
+                    <p class="data-day">Пт</p>
+                    <p class="data-number">26</p>
+                    <p class="data-month">Лютого</p>
+                </div>
+                <div class="data-info">
+                    <div class="data-info_content">
+                        <h2 class="data-info_head">Сад гетсиманський</h2>
+                        <p class="data-info_text">Народна трагедія на 2 дії</p>
+                        <p class="data-info_text">Тривалість вистави 2 год 20 хв.</p>
+                    </div>
+                    <button class="data-info_button" type="button">купити квиток</button>
+                    <img class="data-kod" src="images/slider/kod.png" alt="kod">
+                </div>
+            </div>
+            <button id="next" class="slider_button next" type="button"></button>
+        </div>
+    </div>
+    <main>
+        <div class="main-wrap centre-block">
+            <nav class="main-nav">
+                <ul class="main-menu">
+                    <li><a href="#"><img class="icon" src="images/nav-icon1.png" alt="icon">Фотоархів</a></li>
+                    <li><a href="#"><img class="icon" src="images/nav-icon2.png" alt="icon">Відеоархів</a></li>
+                    <li><a href="#"><img class="icon" src="images/nav-icon3.png" alt="icon">Піклувальна рада</a></li>
+                    <li><a href="#"><img class="icon" src="images/nav-icon4.png" alt="icon">Партнери</a></li>
+                    <li><a href="#"><img class="icon" src="images/nav-icon5.png" alt="icon">Форум</a></li>
+                </ul>
+            </nav>
+            <article class="main-content">
+                <h2>Новини</h2>
+                <div class="content-news">
+                    <a class="news-link" href="#"><img src="images/news-img.jpg" alt="img-news"></a>
+                    <section class="main-section-wrap">
+                        <a class="news-link" href="#">
+                            <h3>Назва новини</h3>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </section>
+                    <footer class="main-section-footer">
+                        <p>12.02.2015</p>
+                        <p>112<img src="images/eye.png" alt="eye"></p>
+                    </footer>
+                </div>
+                <div class="content-news">
+                    <a class="news-link" href="#"><img src="images/news-img.jpg" alt="img-news"></a>
+                    <section class="main-section-wrap">
+                        <a class="news-link" href="#">
+                            <h3>Назва новини</h3>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </section>
+                    <footer class="main-section-footer">
+                        <p>12.02.2015</p>
+                        <p>112<img src="images/eye.png" alt="eye"></p>
+                    </footer>
+                </div>
+                <div class="content-news">
+                    <a class="news-link" href="#"><img src="images/news-img.jpg" alt="img-news"></a>
+                    <section class="main-section-wrap">
+                        <a class="news-link" href="#">
+                            <h3>Назва новини</h3>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </section>
+                    <footer class="main-section-footer">
+                        <p>12.02.2015</p>
+                        <p>112<img src="images/eye.png" alt="eye"></p>
+                        
+                    </footer>
+                </div>
+            </article>
+            <aside class="main-aside">
+                <article class="aside-content">
+                    <h2>Галерея</h2>
+                    <div class="content">
+                        <img src="images/gallery-img.jpg" alt="gallery-img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+                    </div>
+                </article>
+                <article class="aside-content">
+                    <h2>Відео</h2>
+                    <div class="content">
+                        <img src="images/video-img.jpg" alt="video-img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+                    </div>
+                </article>
+            </aside>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-wrap centre-block">
+            <nav class="footer-nav">
+                <ul class="footer-menu">
+                    <li><a href="#">Головна</a></li>
+                    <li><a href="#">Афіша</a></li>
+                    <li><a href="#">Репертуар</a></li>
+                    <li><a href="#">Новини</a></li>
+                    <li><a href="#">Про театр</a></li>
+                    <li><a href="#">Персоналії</a></li>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Фестивалі</a></li>
+                    <li><a href="#">Форум</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social">
+                <ul class="social-menu">
+                    <li><a class="vk" href="#"></a></li>
+                    <li><a class="youtube" href="#"></a></li>
+                    <li><a class="google" href="#"></a></li>
+                    <li><a class="facebook" href="#"></a></li>
+                    <li><a class="twitter" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="scroll-up">
+            <a href="#"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
