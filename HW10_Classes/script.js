@@ -63,7 +63,7 @@ class Polygon extends Shape {
         let sum = 0;
         if (this._points.length >= 1) {
             for (let i = 0; i < this._points.length - 1; i++) {
-            	sum += this._points[i].getDistance(this._points[i + 1]);
+                sum += this._points[i].getDistance(this._points[i + 1]);
             }
         }
         return sum;
@@ -81,7 +81,7 @@ class Rectangle extends Polygon {
     }
 
     area() {
-    	return this._height * this._width;
+        return this._height * this._width;
     }
 
     perimeter() {
@@ -106,13 +106,13 @@ class Square extends Rectangle {
 
 class Circle extends Shape {
     constructor(center, radius) {
-    	super();
+        super();
         this._center = center;
         this._radius = radius;
     }
 
     area() {
-    	return Math.PI * this._radius * this._radius;
+        return Math.PI * this._radius * this._radius;
     }
 
     perimeter() {
@@ -155,7 +155,7 @@ console.log(circle.perimeter()); // значення з онлайн-кальк�
 
 
 // new points
-Shapes = {
+const Shapes = {
     shape,
     polygon,
     rectangle,
