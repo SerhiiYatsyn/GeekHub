@@ -1,0 +1,17 @@
+{
+  "name": "hw12_ts-classes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-typescript": "^5.0.0",
+    "gulp": "^4.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
