@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Theathe</title>
+	<style type="text/css">
+		h1 {
+			font-size: 0;
+		}
+
+		.logo {
+			margin: 3px 5px 3px 0;
+		}
+
+		.header-text {
+			margin: auto 7px auto 7px;
+		}
+
+		.header {
+			display: flex;
+			justify-content: center;
+			background-image: linear-gradient(to left, #bf1e2e, #f1592a);
+		}
+
+		.header-a {
+			padding: 29px 6px 30px 6px;
+			color: white;
+			text-transform: uppercase;
+
+		}
+
+		.header-a:link,
+		.header-a:visited,
+		.header-a:active {
+			text-decoration: none;
+		}
+
+		.header-a:hover {
+			text-decoration: none;
+			color: black;
+			background-color: whitesmoke;
+		}
+
+		.lang {
+			margin-left: 30px;
+			background-color: transparent;
+			color: white;
+			border: none;
+		}
+
+		.poster {
+			z-index: 1;
+		}
+
+		.poster div a {
+			text-decoration: none;
+		}
+
+		.block-of-performances {
+			position: relative;
+			top: -140px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			font-weight: lighter;
+			z-index: 2;
+		}
+
+		.arrow {
+			font-weight: lighter;
+			margin-left: 5px;
+			margin-right: 5px;
+			width: 36px;
+			height: 36px;
+			line-height: 36px;
+			text-align: center;
+			vertical-align: middle;
+			background: #505050;
+			color: white;
+			border-radius: 5px;
+		}
+
+		.arrow:hover {
+			background: #E14927;
+		}
+
+		.performance-date {
+			margin: 0 1px 0 1px;
+			width: 92px;
+			height: 92px;
+			background: #4F4F4F;
+			background: radial-gradient(circle at top left, transparent 15px, #4F4F4F 0) top left,
+				radial-gradient(circle at top right, transparent 15px, #4F4F4F 0) top right,
+				radial-gradient(circle at bottom right, transparent 15px, #4F4F4F 0) bottom right,
+				radial-gradient(circle at bottom left, transparent 15px, #4F4F4F 0) bottom left;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: white;
+		}
+
+		.number-performance-date {
+			font-weight: normal;
+			font-size: xx-large;
+			margin: -18px 0 -12px 0;
+			border-bottom: 1px solid white;
+		}
+
+		.selected-date {
+			width: 464px;
+			height: 92px;
+			background: #E14927;
+			background: radial-gradient(circle at top left, transparent 15px, #E14927 0) top left,
+				radial-gradient(circle at top right, transparent 15px, #E14927 0) top right,
+				radial-gradient(circle at bottom right, transparent 15px, #E14927 0) bottom right,
+				radial-gradient(circle at bottom left, transparent 15px, #E14927 0) bottom left;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			display: flex;
+			flex-direction: column;
+			color: white;
+			padding: 20px;
+		}
+
+		.title-of-perfomance {
+			font-size: xx-large;
+			margin: -8px 0 0 0;
+		}
+
+		.info-ticket {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.info-ticket div p {
+			margin: 11px 0px -11px 0px;
+		}
+
+		.buy-ticket-button {
+			padding: 5px;
+			line-height: 1.5em;
+			background: #4F4F4F;
+			text-align: center;
+			border-radius: 5px;
+			text-transform: uppercase;
+		}
+
+		.buy-ticket-button a {
+			color: white;
+			text-decoration: none;
+		}
+
+		.block-of-performances div:nth-child(4) {
+			background: #E14927;
+			background: #E14927;
+			background: radial-gradient(circle at top left, transparent 15px, #E14927 0) top left,
+				radial-gradient(circle at top right, transparent 15px, #E14927 0) top right,
+				radial-gradient(circle at bottom right, transparent 15px, #E14927 0) bottom right,
+				radial-gradient(circle at bottom left, transparent 15px, #E14927 0) bottom left;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+		}
+
+		nav {
+			font-size: 18px;
+			margin: 20px 100px 0 150px;
+			width: 17%;
+		}
+
+		.nav-left {
+			text-decoration: none;
+			color: black;
+		}
+
+		.nav-left:link,
+		.nav-left:visited,
+		.nav-left:active {
+			text-decoration: none;
+		}
+
+		.nav-left:hover {
+			text-decoration: none;
+			color: red;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.main {
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
+
+		.news {
+			box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+			border-radius: 5px;
+			color: gray;
+			margin: 0 139px 40px 0px;
+
+		}
+
+		.news img {
+			align-items: right;
+		}
+
+		.date-and-views {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 10px;
+			font-size: smaller;
+			padding: 0 7px 0 7px;
+			margin: -15px 5px 0px 0px;
+			opacity: 0.6;
+		}
+
+		.eye {
+			margin: -10px 0px -7px 0;
+		}
+
+		.h2 {
+			color: #E14827;
+			font-size: 30px;
+		}
+
+		.h3 {
+			font-size: 22px;
+			margin: 0 5px 0 0;
+		}
+
+		.news-block {
+			text-decoration: none;
+			color: black;
+			display: block;
+			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+
+		}
+
+		.news-block:link,
+		.news-block:visited,
+		.news-block:active {
+			text-decoration: none;
+		}
+
+		.news-block:hover {
+			text-decoration: none;
+			color: gray;
+		}
+
+		.content {
+			display: flex;
+			margin: -110px 0 0 0;
+		}
+
+		aside div a,
+		aside div video {
+			margin: 0px 74px 0px 0px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+		}
+
+		.gallery {
+			text-decoration: none;
+			color: black;
+			display: block;
+			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+			text-align: center;
+		}
+
+		.footer {
+			border-top: 4px solid orangered;
+			margin: 0 0 50px 0;
+		}
+
+		.footer_left {
+			display: flex;
+			justify-content: center;
+			margin: 20px 0 0 200px;
+		}
+
+		.footer_right {
+			margin-left: 200px;
+		}
+
+		.footer_img {
+			width: 20px;
+			height: 20px;
+			opacity: 0.5;
+		}
+
+		.footer_img:hover {
+			opacity: 1;
+		}
+
+		.footer_a {
+			text-decoration: none;
+			color: grey;
+			margin-right: 10px;
+			text-transform: uppercase;
+		}
+
+		.footer_a:active,
+		.footer_a:visited,
+		.footer_a:link {
+			text-decoration: none;
+		}
+
+		.footer_a:hover {
+			text-decoration: none;
+			color: red;
+		}
+
+		.selected-date div img {
+			margin: -48px 0 0 0;
+			width: 9%;
+		}
+
+		.scroll-up {
+			text-align: center;
+			font-size: xx-large;
+			align-items: center;
+			width: 30px;
+			text-decoration: none;
+			margin: -57px -108px 44px 93px;
+			color: white;
+			background-color: #e14927;
+			border-radius: 5px
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<header class="header">
+		<h1>Театр ім. Т.Г.Шевченка <a href="#"><img class="logo" src="img/log.png" alt="logo"></a></h1>
+		<p class="header-text"><a class="header-a" href="#">Головна</a>
+			<a class="header-a" href="#">Афіша</a>
+			<a class="header-a" href="#">Репертуар</a>
+			<a class="header-a" href="#">Новини</a>
+			<a class="header-a" href="#">Про театр</a>
+			<a class="header-a" href="#">Персоналії</a>
+			<a class="header-a" href="#">Контакти</a>
+			<a class="header-a" href="#">Фестивалі</a>
+		</p>
+		<select class="lang" name="lang">
+			<option selected>УКР</option>
+			<option>РУС</option>
+			<option>ENG</option>
+		</select>
+	</header>
+	<div class="poster">
+		<img src="img/picture.png" alt="poster">
+		<div class="block-of-performances">
+			<a href="#" class="arrow">
+				<</a> <div class="performance-date">
+					<p>Нд</p>
+					<p class="number-performance-date">21</p>
+					<p>лютого</p>
+		</div>
+		<div class="performance-date">
+			<p>Пн</p>
+			<p class="number-performance-date">22</p>
+			<p>лютого</p>
+		</div>
+		<div class="performance-date">
+			<p>Пн</p>
+			<p class="number-performance-date">22</p>
+			<p>лютого</p>
+		</div>
+		<div class="selected-date">
+			<h4 class="title-of-perfomance">Сад гетсиманський</h4>
+			<br>
+			<div class="info-ticket">
+				<div>
+					<p>Народна трагедія на 2 дії</p>
+					<p>Тривалість вистави 2 год 20 хв.</p>
+				</div>
+				<div class="buy-ticket-button">
+					<a href="#">купити квиток</a>
+				</div>
+				<img src="img/invalid-name.png">
+			</div>
+		</div>
+		<div class="performance-date">
+			<p>Чт</p>
+			<p class="number-performance-date">25</p>
+			<p>лютого</p>
+		</div>
+		<div class="performance-date">
+			<p>Пт</p>
+			<p class="number-performance-date">26</p>
+			<p>лютого</p>
+		</div>
+		<a class="arrow">></a>
+	</div>
+
+	<div class="content">
+		<nav>
+			<table class="nav_table">
+				<tr>
+					<td><a class="nav-left" href="#"><img src="img/nav-icon1.png">Фотоархів</a>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="nav-left" href="#"><img src="img/nav-icon2.png">Відеоархів</a>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="nav-left" href="#"><img src="img/nav-icon3.png">Піклувальна рада</a>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="nav-left" href="#"><img src="img/nav-icon4.png">Партнери</a>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="nav-left" href="#"><img src="img/nav-icon5.png">Форум</a>
+					</td>
+				</tr>
+			</table>
+		</nav>
+
+		<main class="main">
+			<div>
+				<h2 class="h2">Новини</h2>
+				<section class="news">
+					<a class="news-block" href="#">
+						<img src="img/news.png" alt="News">
+						<h3 class="h3">Назва новини</h3>
+						<p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+					</a>
+					<div class="date-and-views">
+						<p>12.02.2015</p>
+						<p><img class="eye" src="img/eye.png" alt="viewed:">112</p>
+					</div>
+				</section>
+				<section class="news">
+					<a class="news-block" href="#">
+						<img src="img/news.png" alt="News">
+						<h3 class="h3">Назва новини</h3>
+						<p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+					</a>
+					<div class="date-and-views">
+						<p>12.02.2015</p>
+						<p><img class="eye" src="img/eye.png" alt="viewed:">112</p>
+					</div>
+				</section>
+				<section class="news">
+					<a class="news-block" href="#">
+						<img src="img/news.png" alt="News">
+						<h3 class="h3">Назва новини</h3>
+						<p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+							eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+					</a>
+					<div class="date-and-views">
+						<p>12.02.2015</p>
+						<p><img class="eye" src="img/eye.png" alt="viewed:">112</p>
+					</div>
+				</section>
+			</div>
+		</main>
+		<aside>
+			<div>
+				<h2 class="h2">Галерея</h2>
+				<a class="gallery" href="#"><img src="img/gallery.png" alt="Gallery">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+				</a>
+			</div>
+			<div>
+				<h2 class="h2">Відео</h2>
+				<div>
+					<video controls poster="img/poster.png">
+						<source src="#" type="video/mp4">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					</video>
+					<a class="gallery">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</a>
+				</div>
+			</div>
+		</aside>
+	</div>
+	<footer class="footer">
+		<div class="footer_left">
+			<div>
+				<a class="footer_a" href="#">Головна</a>
+				<a class="footer_a" href="#">Афіша</a>
+				<a class="footer_a" href="#">Репертуар</a>
+				<a class="footer_a" href="#">Новини</a>
+				<a class="footer_a" href="#">Про театр</a>
+				<a class="footer_a" href="#">Персоналії</a>
+				<a class="footer_a" href="#">Контакти</a>
+				<a class="footer_a" href="#">Фестивалі</a>
+			</div>
+			<a class="scroll-up" href="#top">^</a>
+			<div class="footer_right">
+				<a href="#"><img class="footer_img" src="img/vk.png"></a>
+				<a href="#"><img class="footer_img" src="img/google.png"></a>
+				<a href="#"><img class="footer_img" src="img/facebook.png"></a>
+				<a href="#"><img class="footer_img" src="img/twitter.png"></a>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
