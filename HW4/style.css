@@ -1,0 +1,598 @@
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.start {
+    position: relative;
+    width: 100%;
+
+}
+
+.logo {
+    font-size: 40px;
+    position: absolute;
+    top: 5px;
+    left: 150px;
+    width: 10%;
+    color: #fff;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.h-log {
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+.menu {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    font-size: 18px;
+}
+
+ul.menu li {
+    display: inline;
+    text-transform: uppercase;
+    font-size: large;
+    margin: 0 25px 0 0;
+
+}
+
+ul.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    margin: -345px 0 0px 212px;
+    color: white;
+    font-size: 15px;
+}
+
+ul.menu li a:hover {
+    text-decoration: line-through;
+
+}
+
+.download-button {
+    position: absolute;
+    margin: -280px 0 0 212px;
+    height: 50px;
+    width: 224px;
+    background-color: #fff;
+    border-radius: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #eb402c;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.rectangle {
+    max-width: 100%;
+}
+
+.start-centre-text {
+    font-size: 50px;
+    position: absolute;
+    top: 155px;
+    left: 200px;
+    color: white;
+    margin: 10px;
+}
+
+.iphone1-img {
+    position: absolute;
+    top: 120px;
+    right: 200px;
+    width: 25%;
+}
+
+.easy-messaging {
+    display: flex;
+}
+
+.message-img {
+    margin: 50px 0px 0px 100px;
+    padding: 0;
+}
+
+.conversation-img {
+    margin: 107px 0px -98px -211px;
+}
+
+.easy-messaging-info {
+    width: 500px;
+    margin: 255px 0 0 55px;
+}
+
+.easy-messaging-info h2 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #363636;
+}
+
+.easy-messaging-info p {
+    color: #808080;
+    line-height: 1.78;
+    font-size: 18px;
+
+}
+
+.red-dot {
+    color: #d90647;
+}
+
+.people-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 150px;
+    padding-top: 50px;
+    height: 600px;
+}
+
+.people-section-title {
+    align-self: center;
+}
+
+.people-section ul {
+    list-style-type: none;
+    ;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.blockquote {
+    position: relative;
+    width: 370px;
+    height: 210px;
+    border: 1px solid #e0e0e0;
+    font-style: italic;
+}
+
+.blockquote::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 19px;
+    top: 211px;
+    border: 12px solid transparent;
+    border-top: 12px solid #e0e0e0;
+}
+
+.blockquote::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: 210px;
+    border: 11px solid transparent;
+    border-top: 11px solid #fff;
+}
+
+.blockquote-text {
+    width: 315px;
+    height: 113px;
+    margin: 28px 57px 26px 30px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.reviews-title a {
+    color: #eb402c;
+}
+
+.review-author {
+    margin-top: 40px;
+}
+
+.ceo {
+    text-transform: uppercase;
+    color: #667386;
+}
+
+.ceo-icon {
+    border-radius: 50%;
+    float: left;
+    margin: 30px 19px 0 0;
+}
+
+.review-center {
+    margin-top: -30px;
+}
+
+.blockquote-center {
+    box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.25);
+    border: 1px solid #fff;
+}
+
+.flex {
+    display: flex;
+}
+
+.contacts-screen {
+    margin: 146px 0 0 110px;
+    z-index: 1;
+}
+
+.groups-screen {
+    margin: 75px 0 150px -148px;
+}
+
+.what-people-say h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #363636;
+}
+
+.people {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.review {
+    margin-left: 30px;
+    margin-top: 128px;
+}
+
+.quote {
+    height: 210px;
+    width: 370px;
+
+    border: 1px solid #D0D0D0;
+
+    background-color: #fff;
+
+    position: relative;
+
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.quote:hover {
+    margin-bottom: 82px;
+    margin-left: 2px;
+    margin-top: -70px;
+
+    border: 0;
+
+    box-shadow: 0px 30px 60px 0 rgba(54, 54, 54, 0.15);
+}
+
+.quote::before {
+    height: 0;
+    width: 0;
+
+    content: ' ';
+    left: 21px;
+    position: absolute;
+    top: 211px;
+
+    border-top: 11px solid #D0D0D0;
+    border: 11px solid transparent;
+}
+
+.quote::before:hover {
+    width: 0;
+    height: 0;
+
+    content: ' ';
+    left: 21px;
+    position: absolute;
+    top: 211px;
+
+    border-top: 11px solid #fff;
+    border: 11px solid transparent;
+}
+
+.quote::after {
+    height: 0;
+    width: 0;
+
+    content: ' ';
+    left: 22px;
+    position: absolute;
+    top: 210px;
+
+    border-top: 10px solid #fff;
+    border: 10px solid transparent;
+}
+
+.quote::after:hover {
+    width: 0;
+    height: 0;
+
+    content: ' ';
+    left: 22px;
+    position: absolute;
+    top: 210px;
+
+    border-top: 10px solid #fff;
+    border: 10px solid transparent;
+}
+
+.quote p {
+    width: 283px;
+
+    color: #808080;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 32px;
+
+    margin-bottom: 18px;
+    margin-top: 20px;
+}
+
+.quote .quote-link {
+    color: #d90647;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    line-height: 28px;
+}
+
+.info {
+    background-image: linear-gradient(to top, #eb402c, #d90647);
+    height: 517px;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+
+}
+
+.info p {
+    padding: 0 100px 0 115px;
+}
+
+.info p img {
+    margin: -85px 0 0 0;
+}
+
+.info .left {
+    width: 215px;
+    margin: 120px 0 0 0;
+
+}
+
+.info .left dt {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: right;
+    color: #ffffff;
+
+}
+
+.info .left dd {
+    opacity: 0.6;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 -15px 90px 0;
+
+}
+
+.info .left {
+    width: 220px;
+    margin: 120px 0 0 0;
+}
+
+.left img {
+    position: absolute;
+    margin: -32px 0 0 270px;
+
+}
+
+.left .call-icon {
+    width: 3%;
+}
+
+
+.info .right {
+    width: 215px;
+    margin: 120px 0 0 0;
+
+}
+
+.info .right dt {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: left;
+    color: #ffffff;
+
+}
+
+.info .right dd {
+    opacity: 0.6;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 -15px 90px 0;
+
+}
+
+.info .right {
+    width: 220px;
+    margin: 120px 0 0 0;
+}
+
+.right img {
+    position: absolute;
+    margin: -9px 0 0 -99px;
+
+}
+
+.right .call-icon {
+    width: 3%;
+}
+
+.tran {
+    position: absolute;
+}
+
+.button-play {
+    position: absolute;
+    margin: 233px 0 0 0;
+    height: 15%;
+}
+
+.subscribe-download {
+    margin-top: 200px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+
+}
+
+.h2 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #363636;
+    text-align: center;
+}
+
+.description {
+    color: #808080;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.subscribe-form {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.subscribe-download .subscribe-form {
+    height: 50px;
+    width: 571px;
+    background-color: #f8f8f8;
+    border-radius: 25px;
+    display: flex;
+    margin-bottom: 147px;
+    margin-top: 70px;
+    margin-left: 30%;
+
+}
+
+.subscribe-download .mail {
+    height: 50px;
+    width: 391px;
+    padding-left: 31px;
+    background-color: transparent;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+.subscribe-download .button-subscribe {
+    height: 50px;
+    width: 180px;
+    background: linear-gradient(to bottom, #d90647, #eb402c);
+    border-radius: 25px;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0px 10px 30px 0 rgba(223, 27, 61, 0.3);
+    cursor: pointer;
+}
+
+.h-logo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.download {
+    margin-top: 80px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.appstore-logo {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 200px;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer-menu {
+    margin: 25px 0;
+    margin-left: 150px
+}
+
+.footer-menu a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 25px
+}
+
+.footer a {
+    text-decoration: none;
+    color: #363636;
+    text-transform: uppercase;
+    height: 16px;
+    font-size: 18px;
+    line-height: 1.56;
+
+
+}
+
+.footer a:hover {
+    text-decoration: line-through;
+}
+
+.select-lang {
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    padding-left: 25px;
+    background-color: #f8f8f8;
+    position: absolute;
+    margin: 15px 0 0 0;
+    right: 60px;
+    background-image: url("img/arrow-bottom.png");
+    background-position: 115px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 150px;
+
+}
