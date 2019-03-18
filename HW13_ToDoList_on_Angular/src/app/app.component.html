@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="header">
+    <h1>Список справ</h1>
+    <div class="counters">
+      <p>Всього справ: <span id="all">{{Tasks.length}}</span></p>
+      <p>Виконано справ: <span id="done">{{DoneTasks}}</span></p>
+      <p>Не виконано справ: <span id="undone">{{UndoneTasks}}</span></p>
+
+    </div>
+    <div class="container">
+      <select id="filter" [(ngModel)]="selected" (change)="filterAll(selected)">
+        <option selected value="all" >Всі справи</option>
+        <option value="done">Виконані</option>
+        <option value="undone">Не виконані</option>
+      </select>
+      <form class="form">
+        <label for="toDoEl"></label>
+        <input type="text" placeholder="Введіть нову справу..." id="toDoEl" name="titleoftask" [(ngModel)]="titleoftask"
+               #taskTitle="ngModel" required>
+        <button *ngIf="!isEdit" [disabled]="taskTitle.invalid" (click)="addTask()" class="addBtn">Добавить</button>
+        <button *ngIf="isEdit"  [disabled]="taskTitle.invalid" (click)="confirmEditTask(tempTask);titleoftask=''" class="editConfirmBtn">Редагувати</button>
+      </form>
+    </div>
+  </div>
+  <ul *ngIf="Tasks.length" class="listt" id="list">
+    <li *ngFor="let task of Tasks" [ngClass]="{'checked': task.complete, 'hidden': task.hide}"  (click)="perform(task)">
+      {{task.title}} <span (click)="editTask(task); $event.stopPropagation(); tempId = task.id" class="editBtn">EDIT</span>
+      <span class="close" (click)="deleteTask(task);$event.stopPropagation()" >X</span></li>
+  </ul>
+</div>
