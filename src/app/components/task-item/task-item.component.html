@@ -1,0 +1,6 @@
+<li *ngFor="let task of Tasks" [ngClass]="{'checked': task.complete, 'hidden': task.hide || task.deleted} "
+    (click)="perform(task)">{{task.title}}
+  <span (click)="editTask(task);$event.stopPropagation()"  class="editBtn">EDIT</span>
+  <span *ngIf="!task.archived" (click)="task.archived=!task.archived;$event.stopPropagation()" class="archiveBtn">ARCHIVE</span>
+  <span *ngIf="task.archived" (click)="task.archived=!task.archived;$event.stopPropagation()" class="archiveBtn">ARCHIVED</span>
+  <span class="close" (click)="deleteTask(task);$event.stopPropagation()" >X</span></li>
