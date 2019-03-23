@@ -1,0 +1,4 @@
+<ul *ngIf="Tasks.length" class="listt" id="list">
+  <app-task-item [Tasks]="Tasks" (someChanges)="updates($event)"></app-task-item>
+</ul>
+
