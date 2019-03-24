@@ -53,12 +53,9 @@ export class AppComponent {
         break;
       case 'perform':
         if (eventParam[2] === 'complete') {
-          console.log(eventParam);
           this.DoneCount++;
           this.UnDoneCount--;
         } else if (eventParam[2] === 'uncomplete') {
-          console.log(eventParam);
-
           this.DoneCount--;
           this.UnDoneCount++;
         }
@@ -67,11 +64,10 @@ export class AppComponent {
         this.EditMode = true;
         this.titleOfTask = eventParam[2];
         this.tempTask = eventParam[3];
-        console.log(eventParam, 'upper');
-        console.log(this.titleOfTask, 'upper2');
         break;
       case 'editDone':
         this.EditMode = false;
+        this.titleOfTask = '';
         break;
       case 'delete':
         if (eventParam[2] === 'done') {

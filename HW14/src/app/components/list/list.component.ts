@@ -20,14 +20,12 @@ export class ListComponent implements OnInit {
     switch (eventParam[1]) {
       case 'perform':
         this.someChanges.emit(eventParam);
-        console.log(eventParam);
         break;
       case 'editMode':
         this.someChanges.emit(eventParam);
         break;
       case 'editDone':
         this.someChanges.emit(eventParam);
-        console.log(eventParam);
         break;
       case 'delete':
         this.someChanges.emit(eventParam);

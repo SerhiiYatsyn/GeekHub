@@ -22,15 +22,12 @@ export class FormComponent implements OnInit {
       archived: false,
       deleted: false
     });
-    console.log(this.Tasks);
-    // this.UnDoneTasks++;
     this.someChanges.emit({1: 'addTask', 2: this.Tasks});
   }
 
   confirmEditTask(task: Task) {
     task.title = this.titleOfTask;
     this.someChanges.emit({1: 'editDone'});
-    console.log(task.title);
   }
 
   constructor() {
