@@ -2,24 +2,25 @@
   <div class="header">
     <h1>Список справ</h1>
     <div class="counters">
-      <p>Всього справ: <span id="all">{{DoneCount+UnDoneCount}}</span></p>
+      <p>Всього справ: <span id="all">{{todoService.Tasks.length}}</span></p>
       <p>Виконано справ: <span id="done">{{DoneCount}}</span></p>
       <p>Не виконано справ: <span id="undone">{{UnDoneCount}}</span></p>
 
     </div>
     <div class="container">
       <select id="filter" [(ngModel)]="selected" (change)="filterAll(selected)">
-        <option selected value="all" >Всі справи</option>
+        <option selected value="all">Всі справи</option>
         <option value="done">Виконані</option>
         <option value="undone">Не виконані</option>
         <option value="archived">Архівовані</option>
       </select>
 
-      <app-form [Tasks]="Tasks" [EditMode]="EditMode" [tempTask]="tempTask" [titleOfTask]="titleOfTask" (someChanges)="updates($event)"></app-form>
+      <app-form [EditMode]="EditMode" [tempTaskIndex]="tempTaskIndex" [titleOfTask]="titleOfTask"
+                (someChanges)="updates($event)"></app-form>
 
     </div>
   </div>
 
-  <app-list *ngIf="Tasks.length" [Tasks]="Tasks" (someChanges)="updates($event)"></app-list>
+  <app-list *ngIf="todoService.Tasks.length" (someChanges)="updates($event)"></app-list>
 
 </div>

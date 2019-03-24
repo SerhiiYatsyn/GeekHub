@@ -3,7 +3,7 @@
   <input type="text" placeholder="Введіть нову справу..." id="toDoEl" name="titleOfTask" [(ngModel)]="titleOfTask"
          #taskTitle="ngModel" required>
   <button *ngIf="!EditMode" [disabled]="taskTitle.invalid" (click)="addTask()" class="addBtn">Добавить</button>
-  <button *ngIf="EditMode" [disabled]="taskTitle.invalid" (click)="confirmEditTask(tempTask);titleOfTask=''"
+  <button *ngIf="EditMode" [disabled]="taskTitle.invalid" (click)="confirmEditTask(tempTaskIndex);titleOfTask=''"
           class="editConfirmBtn">Редагувати
   </button>
 </form>

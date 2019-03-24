@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Task} from '../../modules/Task';
+import {ToDoService} from '../../services/to-do.service';
 
 @Component({
   selector: 'app-form',
@@ -8,35 +9,26 @@ import {Task} from '../../modules/Task';
 })
 export class FormComponent implements OnInit {
   @Input() titleOfTask: string;
-  @Input() tempTask: Task;
+  @Input() tempTaskIndex: number;
   @Input() Tasks: Task[];
   @Input() EditMode: boolean;
   @Output() someChanges = new EventEmitter();
 
-  addTask() {
-    this.Tasks.unshift({
-      id: this.Tasks.length,
-      title: this.titleOfTask,
-      complete: false,
-      hide: false,
-      archived: false,
-      deleted: false
-    });
-    console.log(this.Tasks);
-    // this.UnDoneTasks++;
-    this.someChanges.emit({1: 'addTask', 2: this.Tasks});
-  }
 
-  confirmEditTask(task: Task) {
-    task.title = this.titleOfTask;
-    this.someChanges.emit({1: 'editDone'});
-    console.log(task.title);
-  }
-
-  constructor() {
+  constructor(private todoService: ToDoService) {
   }
 
   ngOnInit() {
+  }
+
+  addTask() {
+    this.someChanges.emit({1: 'addTask'});
+    this.todoService.addTask(this.titleOfTask);
+  }
+
+  confirmEditTask(index) {
+    this.todoService.Tasks[index].title = this.titleOfTask;
+    this.someChanges.emit({1: 'editDone'});
   }
 
 }

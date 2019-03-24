@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Task} from '../../modules/Task';
+import {ToDoService} from '../../services/to-do.service';
 
 @Component({
   selector: 'app-list',
@@ -7,10 +7,9 @@ import {Task} from '../../modules/Task';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  @Input() Tasks: Task[];
   @Output() someChanges = new EventEmitter();
 
-  constructor() {
+  constructor(private todoService: ToDoService) {
   }
 
   ngOnInit() {

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Task} from '../../modules/Task';
+import {ToDoService} from '../../services/to-do.service';
 
 @Component({
   selector: 'app-task-item',
@@ -7,40 +8,32 @@ import {Task} from '../../modules/Task';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent implements OnInit {
-  @Input() Tasks: Task[];
   @Output() someChanges = new EventEmitter();
-  titleOfTask: string;
 
-  constructor() {
+  constructor(private todoService: ToDoService) {
   }
 
   ngOnInit() {
   }
 
-  perform(task: Task) {
-    // complete task
-    console.log(task);
-    task.complete = !task.complete;
-    // update counters
-    if (task.complete) {
+  perform(index) {
+    this.todoService.switchComplete(index);
+    if (this.todoService.Tasks[index].complete) {
       this.someChanges.emit({1: 'perform', 2: 'complete'});
     } else {
       this.someChanges.emit({1: 'perform', 2: 'uncomplete'});
-
     }
-    console.log(task);
   }
 
-  editTask(task: Task) {
-    this.titleOfTask = this.Tasks.filter(t => t.id === task.id)[0].title;
-    this.someChanges.emit({1: 'editMode', 2: this.titleOfTask, 3: task});
-    console.log(this.titleOfTask);
+  editTask(index) {
+    const titleOfTask = this.todoService.Tasks[index].title;
+    this.someChanges.emit({1: 'editMode', 2: titleOfTask, 3: index});
   }
 
-  deleteTask(task) {
-    task.deleted = true;
+  deleteTask(index) {
+    this.todoService.deleteTask(index);
     let buff;
-    if (this.Tasks.filter(t => t.id === task.id)[0].complete) {
+    if (this.todoService.Tasks[index].complete) {
       buff = 'done';
     } else {
       buff = 'undone';
