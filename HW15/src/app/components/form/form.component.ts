@@ -9,6 +9,7 @@ import {ToDoService} from '../../services/to-do.service';
 })
 export class FormComponent implements OnInit {
   @Input() titleOfTask: string;
+  @Input() owner: string;
   @Input() tempTaskIndex: number;
   @Input() Tasks: Task[];
   @Input() EditMode: boolean;
@@ -23,7 +24,8 @@ export class FormComponent implements OnInit {
 
   addTask() {
     this.someChanges.emit({1: 'addTask'});
-    this.todoService.addTask(this.titleOfTask);
+    this.todoService.addTask(this.titleOfTask, this.owner);
+    console.log(this.todoService.Tasks);
   }
 
   confirmEditTask(index) {

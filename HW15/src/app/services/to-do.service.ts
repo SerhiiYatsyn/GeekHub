@@ -10,10 +10,11 @@ export class ToDoService {
   constructor() {
   }
 
-  addTask(Title) {
+  addTask(Title, Owner) {
     this.Tasks.unshift({
       id: this.Tasks.length,
       title: Title,
+      owner: Owner,
       complete: false,
       hide: false,
       archived: false,

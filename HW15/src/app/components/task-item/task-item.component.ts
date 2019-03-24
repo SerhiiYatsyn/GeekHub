@@ -41,4 +41,8 @@ export class TaskItemComponent implements OnInit {
     this.someChanges.emit({1: 'delete', 2: buff});
 
   }
+
+  filterByOwner(t) {
+    this.someChanges.emit({1: 'filterByOwner', 2: t });
+  }
 }

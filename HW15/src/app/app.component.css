@@ -36,3 +36,10 @@
 app-form {
   width: 100%;
 }
+#owner{
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  width: 25%;
+}

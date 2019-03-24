@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Task} from './modules/Task';
 import {ToDoService} from './services/to-do.service';
 
 @Component({
@@ -16,8 +15,10 @@ export class AppComponent {
   selected = 'all';
   titleOfTask: string;
   tempTaskIndex: number;
+  owner: string;
+  buffOwner: string;
 
-  constructor(private todoService: ToDoService) {
+  constructor(public todoService: ToDoService) {
   }
 
   filterAll(selected) {
@@ -45,7 +46,15 @@ export class AppComponent {
             t.hide = true;
           }
         }));
+        break;
     }
+    if(selected !== 'all' && selected !== 'done' && selected !== 'undone' && selected !==  'archived')
+    this.todoService.Tasks.forEach(t => {
+      console.log(selected);
+      if (selected !== t.owner) {
+          t.hide = true;
+        }
+      });
   }
 
 
@@ -78,6 +87,12 @@ export class AppComponent {
         } else if (eventParam[2] === 'undone') {
           this.UnDoneCount--;
         }
+        break;
+      case 'filterByOwner':
+        this.selected = 'owner';
+        this.filterAll(eventParam[2]);
+        console.log(this.selected);
+        console.log(eventParam, 'f');
         break;
     }
   }

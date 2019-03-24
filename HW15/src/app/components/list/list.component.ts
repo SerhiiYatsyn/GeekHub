@@ -30,6 +30,9 @@ export class ListComponent implements OnInit {
         break;
       case 'delete':
         this.someChanges.emit(eventParam);
+        break;
+      case 'filterByOwner':
+        this.someChanges.emit(eventParam);
     }
   }
 }

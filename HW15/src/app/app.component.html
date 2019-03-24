@@ -1,6 +1,10 @@
 <div class="wrapper">
   <div class="header">
     <h1>Список справ</h1>
+    <div class="owner">
+      <label for="owner"></label>
+      <input type="text" placeholder="Введіть ім'я власника справи" id="owner" name="owner" [(ngModel)]="owner">
+    </div>
     <div class="counters">
       <p>Всього справ: <span id="all">{{todoService.Tasks.length}}</span></p>
       <p>Виконано справ: <span id="done">{{DoneCount}}</span></p>
@@ -13,9 +17,10 @@
         <option value="done">Виконані</option>
         <option value="undone">Не виконані</option>
         <option value="archived">Архівовані</option>
+        <option value="owner">Власник</option>
       </select>
 
-      <app-form [EditMode]="EditMode" [tempTaskIndex]="tempTaskIndex" [titleOfTask]="titleOfTask"
+      <app-form [EditMode]="EditMode" [owner]="owner" [tempTaskIndex]="tempTaskIndex" [titleOfTask]="titleOfTask"
                 (someChanges)="updates($event)"></app-form>
 
     </div>
