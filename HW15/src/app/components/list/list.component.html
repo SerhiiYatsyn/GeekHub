@@ -1,0 +1,4 @@
+<ul *ngIf="todoService.Tasks.length" class="listt" id="list">
+  <app-task-item (someChanges)="updates($event)"></app-task-item>
+</ul>
+
