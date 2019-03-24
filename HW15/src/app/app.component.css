@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: black;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.counters {
+  display: flex;
+  justify-content: space-around
+}
+
+.container {
+  display: flex;
+}
+
+#filter {
+  border-radius: 50px;
+}
+
+app-form {
+  width: 100%;
+}
