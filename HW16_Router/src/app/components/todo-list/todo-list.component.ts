@@ -9,6 +9,7 @@ import { ToDoService } from '../../services/to-do.service';
 })
 export class TodoListComponent implements OnInit {
   @Output() someChanges = new EventEmitter();
+  selected = 'all';
 
   constructor(private todoService: ToDoService) {
   }
@@ -35,5 +36,40 @@ export class TodoListComponent implements OnInit {
       case 'filterByOwner':
         this.someChanges.emit(eventParam);
     }
+  }
+  filterAll(selected) {
+    this.todoService.Tasks.forEach(t => t.hide = false);
+    switch (selected) {
+      case 'all':
+        break;
+      case 'done':
+        this.todoService.Tasks.forEach(t => {
+          if (!t.complete) {
+            t.hide = true;
+          }
+        });
+        break;
+      case 'undone':
+        this.todoService.Tasks.forEach(t => {
+          if (t.complete) {
+            t.hide = true;
+          }
+        });
+        break;
+      case  'archived':
+        this.todoService.Tasks.forEach((t => {
+          if (!t.archived) {
+            t.hide = true;
+          }
+        }));
+        break;
+    }
+    if(selected !== 'all' && selected !== 'done' && selected !== 'undone' && selected !==  'archived')
+      this.todoService.Tasks.forEach(t => {
+        console.log(selected);
+        if (selected !== t.owner) {
+          t.hide = true;
+        }
+      });
   }
 }

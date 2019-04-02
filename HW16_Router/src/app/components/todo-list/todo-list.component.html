@@ -1,3 +1,20 @@
+<div class="container">
+  <select id="filter" [(ngModel)]="selected" (change)="filterAll(selected)">
+    <option selected value="all">Всі справи</option>
+    <option value="done">Виконані</option>
+    <option value="undone">Не виконані</option>
+    <option value="archived">Архівовані</option>
+    <option value="owner">Власник</option>
+  </select>
+
+  <div class="counters">
+  <p class="text">Всього справ: <span id="all">{{todoService.Tasks.length}}</span></p>
+  <p class="text">Виконано справ: <span id="done">{{todoService.DoneCount}}</span></p>
+  <p class="text">Не виконано справ: <span id="undone">{{todoService.UnDoneCount}}</span></p>
+</div>
+
+
+
 <ul *ngIf="todoService.Tasks.length" class="listt" id="list">
   <app-task-item (someChanges)="updates($event)"></app-task-item>
 </ul>

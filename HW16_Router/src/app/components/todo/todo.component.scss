@@ -33,7 +33,7 @@
   border-radius: 50px;
 }
 
-app-form {
+app-todo-form {
   width: 100%;
 }
 #owner{
@@ -42,4 +42,11 @@ app-form {
   font-size: 16px;
   border-radius: 50px;
   width: 25%;
+}
+.warn{
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 62px;
+  right: 49%;
 }

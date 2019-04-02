@@ -17,8 +17,13 @@ export class TaskItemComponent implements OnInit {
     this.todoService.switchComplete(index);
     if (this.todoService.Tasks[index].complete) {
       this.someChanges.emit({1: 'perform', 2: 'complete'});
+      this.todoService.DoneCount++;
+      this.todoService.UnDoneCount--;
+
     } else {
       this.someChanges.emit({1: 'perform', 2: 'uncomplete'});
+      this.todoService.DoneCount--;
+      this.todoService.UnDoneCount++;
     }
   }
 
