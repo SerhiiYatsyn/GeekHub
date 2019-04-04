@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TodoFormComponent } from './todo-form.component';
+import {TodoFormComponent} from './todo-form.component';
 
 describe('TodoFormComponent', () => {
   let component: TodoFormComponent;
@@ -8,9 +8,9 @@ describe('TodoFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoFormComponent ]
+      declarations: [TodoFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

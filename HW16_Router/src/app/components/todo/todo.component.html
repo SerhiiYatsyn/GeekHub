@@ -1,23 +1,19 @@
 <div class="wrapper">
   <div class="header">
-    <h1>Додати справу</h1>
+    <h1>Add Task</h1>
     <div class="owner">
       <label for="owner"></label>
-      <input type="text" placeholder="Введіть ім'я власника справи" id="owner" name="owner" [(ngModel)]="owner">
+      <input type="text" placeholder="Enter owner`s name" id="owner" name="owner" [(ngModel)]="owner">
     </div>
     <div class="counters">
-      <p>Всього справ: <span id="all">{{todoService.Tasks.length}}</span></p>
-      <p>Виконано справ: <span id="done">{{todoService.DoneCount}}</span></p>
-      <p>Не виконано справ: <span id="undone">{{todoService.UnDoneCount}}</span></p>
+      <p>All tasks: <span id="all">{{todoService.Tasks.length}}</span></p>
+      <p>Done tasks: <span id="done">{{todoService.DoneCount}}</span></p>
+      <p>Not done tasks: <span id="undone">{{todoService.UnDoneCount}}</span></p>
     </div>
     <div class="container">
 
-      <app-todo-form [EditMode]="EditMode" [owner]="owner" [tempTaskIndex]="tempTaskIndex" [titleOfTask]="titleOfTask"
-                (someChanges)="updates($event)"></app-todo-form>
+      <app-todo-form [owner]="owner" [tempTaskIndex]="tempTaskIndex" [titleOfTask]="titleOfTask"></app-todo-form>
 
     </div>
   </div>
-
-  <!-- <app-todo-list *ngIf="todoService.Tasks.length" (someChanges)="updates($event)"></app-todo-list> -->
-
 </div>

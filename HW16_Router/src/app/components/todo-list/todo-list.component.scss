@@ -49,17 +49,19 @@
   width: 7px;
 }
 
-div.counters{
+div.counters {
   background-color: black;
   color: white;
   display: flex;
   justify-content: space-evenly;
-  .text{
+
+  .text {
     font-family: 'Acme', sans-serif;
     font-size: 30px;
     margin: 0;
   }
 }
+
 #filter {
   font-family: 'Acme', sans-serif;
   font-size: 30px;
@@ -68,4 +70,22 @@ div.counters{
   border-radius: 50px;
   position: absolute;
   height: 8.3%;
+}
+
+input.edit_title{
+  width: 90%;
+  background-color: black;
+  height: 45px;
+  border-radius: 25px;
+  color: white;
+  padding-left: 5px;
+  font-size: 22px;
+}
+
+button.confirm_edit{
+  height: 45px;
+  width: 10%;
+  border-radius: 25px;
+
+
 }

@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Task } from '../modules/Task';
+import {Injectable} from '@angular/core';
+import {Task} from '../modules/Task';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,7 @@ export class ToDoService {
   UnDoneCount = 0;
   EditMode = false;
   TasksCount = 0;
+  titleOfEditingTask: string;
 
   constructor() {
   }
@@ -31,16 +32,14 @@ export class ToDoService {
   }
 
   deleteTask(index) {
-    if(this.Tasks[index].complete)
+    if (this.Tasks[index].complete) {
       this.DoneCount--;
-    else this.UnDoneCount--;
+    } else {
+      this.UnDoneCount--;
+    }
     this.TasksCount--;
     this.Tasks[index].deleted = true;
 
-  }
-
-  archiveTask(index) {
-    this.Tasks[index].archived = !this.Tasks[index].archived;
   }
 
   switchComplete(index) {

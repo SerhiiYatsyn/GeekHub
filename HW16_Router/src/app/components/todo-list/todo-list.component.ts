@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { Task } from '../../modules/Task';
-import { ToDoService } from '../../services/to-do.service';
+import {ToDoService} from '../../services/to-do.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -10,8 +9,10 @@ import { ToDoService } from '../../services/to-do.service';
 export class TodoListComponent implements OnInit {
   @Output() someChanges = new EventEmitter();
   selected = 'all';
+  titleOfEditingTask: string;
+  TmpIndx: string;
 
-  constructor(private todoService: ToDoService) {
+  constructor(public todoService: ToDoService) {
   }
 
   ngOnInit() {
@@ -19,12 +20,9 @@ export class TodoListComponent implements OnInit {
 
   updates(eventParam) {
     switch (eventParam[1]) {
-      case 'perform':
-        this.someChanges.emit(eventParam);
-        console.log(eventParam);
-        break;
       case 'editMode':
-        this.someChanges.emit(eventParam);
+        this.titleOfEditingTask = eventParam[3];
+        this.TmpIndx = eventParam[2];
         break;
       case 'editDone':
         this.someChanges.emit(eventParam);
@@ -34,9 +32,11 @@ export class TodoListComponent implements OnInit {
         this.someChanges.emit(eventParam);
         break;
       case 'filterByOwner':
-        this.someChanges.emit(eventParam);
+        this.selected = 'owner';
+        this.filterAll(eventParam[2]);
     }
   }
+
   filterAll(selected) {
     this.todoService.Tasks.forEach(t => t.hide = false);
     switch (selected) {
@@ -64,12 +64,19 @@ export class TodoListComponent implements OnInit {
         }));
         break;
     }
-    if(selected !== 'all' && selected !== 'done' && selected !== 'undone' && selected !==  'archived')
+    if (selected !== 'all' && selected !== 'done' && selected !== 'undone' && selected !== 'archived') {
       this.todoService.Tasks.forEach(t => {
         console.log(selected);
         if (selected !== t.owner) {
           t.hide = true;
         }
       });
+    }
+  }
+
+  confirmEditTask() {
+    this.todoService.Tasks[this.TmpIndx].title = this.titleOfEditingTask;
+    this.todoService.EditMode = false;
+    this.titleOfEditingTask = '';
   }
 }

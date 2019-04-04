@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import { ToDoService } from '../../services/to-do.service';
+import {ToDoService} from '../../services/to-do.service';
 
 @Component({
   selector: 'app-task-item',
@@ -8,44 +8,42 @@ import { ToDoService } from '../../services/to-do.service';
 })
 export class TaskItemComponent implements OnInit {
   @Output() someChanges = new EventEmitter();
-
-  constructor(private todoService: ToDoService) { }
+  constructor(private todoService: ToDoService) {
+  }
 
   ngOnInit() {
   }
+
   perform(index) {
     this.todoService.switchComplete(index);
     if (this.todoService.Tasks[index].complete) {
-      this.someChanges.emit({1: 'perform', 2: 'complete'});
       this.todoService.DoneCount++;
       this.todoService.UnDoneCount--;
 
     } else {
-      this.someChanges.emit({1: 'perform', 2: 'uncomplete'});
       this.todoService.DoneCount--;
       this.todoService.UnDoneCount++;
     }
   }
 
   editTask(index) {
-    const titleOfTask = this.todoService.Tasks[index].title;
-    this.someChanges.emit({1: 'editMode', 2: titleOfTask, 3: index});
+    this.todoService.EditMode = true;
+    const titleOfEditingTask = this.todoService.Tasks[index].title;
+    this.someChanges.emit({1: 'editMode', 2: index, 3: titleOfEditingTask});
   }
 
   deleteTask(index) {
     this.todoService.deleteTask(index);
-    let buff;
     if (this.todoService.Tasks[index].complete) {
-      buff = 'done';
+      this.todoService.DoneCount--;
     } else {
-      buff = 'undone';
+      this.todoService.UnDoneCount--;
     }
-    this.someChanges.emit({1: 'delete', 2: buff});
-
+    this.todoService.TasksCount--;
   }
 
   filterByOwner(t) {
-    this.someChanges.emit({1: 'filterByOwner', 2: t });
+    this.someChanges.emit({1: 'filterByOwner', 2: t});
   }
 
 }

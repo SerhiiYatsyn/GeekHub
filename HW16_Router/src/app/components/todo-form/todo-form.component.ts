@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { Task } from '../../modules/Task';
+import {Task} from '../../modules/Task';
 import {ToDoService} from '../../services/to-do.service';
 
 @Component({
@@ -11,8 +11,6 @@ export class TodoFormComponent implements OnInit {
   @Input() titleOfTask: string;
   @Input() owner: string;
   @Input() tempTaskIndex: number;
-  @Input() Tasks: Task[];
-  @Input() EditMode: boolean;
   @Output() someChanges = new EventEmitter();
 
 
@@ -25,11 +23,9 @@ export class TodoFormComponent implements OnInit {
   addTask() {
     this.someChanges.emit({1: 'addTask'});
     this.todoService.addTask(this.titleOfTask, this.owner);
-    console.log(this.todoService.Tasks);
   }
 
   confirmEditTask(index) {
-    this.todoService.Tasks[index].title = this.titleOfTask;
-    this.someChanges.emit({1: 'editDone'});
+    this.todoService.Tasks[index].title = this.todoService.titleOfEditingTask;
   }
 }
