@@ -1,0 +1,30 @@
+nav.navigation {
+  background-color: mediumblue;
+
+  ul {
+    display: flex;
+    margin: 0 0 0 0;
+    justify-content: center;
+
+    li {
+      list-style-type: none;
+      margin: 0 50px;
+
+      a {
+        text-decoration: none;
+        font-size: 40px;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: 'Acme', sans-serif;
+
+        &:hover {
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: white !important;
+}

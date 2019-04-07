@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: black;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.counters {
+  display: flex;
+  justify-content: space-around
+}
+
+.container {
+  display: flex;
+}
+
+#filter {
+  border-radius: 50px;
+}
+
+app-todo-form {
+  width: 100%;
+}
+
+#owner {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  width: 25%;
+}
+
+.warn {
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 62px;
+  right: 49%;
+}

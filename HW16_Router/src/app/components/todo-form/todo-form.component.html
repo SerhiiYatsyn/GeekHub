@@ -1,0 +1,9 @@
+<form class="form">
+  <label for="toDoEl"></label>
+  <input type="text" placeholder="Введіть нову справу..." id="toDoEl" name="titleOfTask" [(ngModel)]="titleOfTask"
+         #taskTitle="ngModel" required>
+  <button *ngIf="!todoService.EditMode" [disabled]="taskTitle.invalid" (click)="addTask()" class="addBtn">Add</button>
+  <button *ngIf="todoService.EditMode" [disabled]="taskTitle.invalid" (click)="confirmEditTask(tempTaskIndex);
+          titleOfTask=''" class="editConfirmBtn">Edit
+  </button>
+</form>

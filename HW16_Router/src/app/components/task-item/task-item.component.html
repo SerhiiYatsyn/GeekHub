@@ -1,0 +1,9 @@
+<li *ngFor="let task of todoService.Tasks; let i = index;"
+    [ngClass]="{'checked': task.complete, 'hidden': task.hide || task.deleted} "
+    (click)="perform(i)">{{task.title}}
+  <span (click)="editTask(i);$event.stopPropagation()" class="editBtn">EDIT</span>
+  <span class="owner" *ngIf="task.owner"
+        (click)="filterByOwner(task.owner);$event.stopPropagation()">Власник: {{task.owner}}</span>
+  <span *ngIf="!task.archived" (click)="task.archived=!task.archived;$event.stopPropagation()" class="archiveBtn">ARCHIVE</span>
+  <span *ngIf="task.archived" (click)="task.archived=!task.archived;$event.stopPropagation()" class="archiveBtn">ARCHIVED</span>
+  <span class="close" (click)="deleteTask(i);$event.stopPropagation()">X</span></li>

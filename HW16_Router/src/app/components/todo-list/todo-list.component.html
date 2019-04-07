@@ -1,0 +1,26 @@
+<div class="container">
+  <select id="filter" [(ngModel)]="selected" (change)="filterAll(selected)">
+    <option selected value="all">All tasks</option>
+    <option value="done">Done</option>
+    <option value="undone">Not done</option>
+    <option value="archived">Archived</option>
+    <option value="owner">Owner</option>
+  </select>
+
+  <div class="counters">
+    <p class="text">All tasks: <span id="all">{{todoService.Tasks.length}}</span></p>
+    <p class="text">Done tasks: <span id="done">{{todoService.DoneCount}}</span></p>
+    <p class="text">Not done tasks: <span id="undone">{{todoService.UnDoneCount}}</span></p>
+  </div>
+</div>
+<div class="editmode" *ngIf="todoService.EditMode">
+  <form>
+    <label for="TempTitle"></label>
+    <input type="text" [(ngModel)]="titleOfEditingTask" required id="TempTitle" class="edit_title"
+           name="titleOfEditingTask" #taskTitle="ngModel">
+    <button (click)="confirmEditTask()" [disabled]="taskTitle.invalid" class="confirm_edit">Add</button>
+  </form>
+</div>
+<ul *ngIf="todoService.Tasks.length" class="listt" id="list">
+  <app-task-item (someChanges)="updates($event)"></app-task-item>
+</ul>

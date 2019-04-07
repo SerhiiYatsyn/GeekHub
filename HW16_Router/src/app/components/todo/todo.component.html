@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="header">
+    <h1>Add Task</h1>
+    <div class="owner">
+      <label for="owner"></label>
+      <input type="text" placeholder="Enter owner`s name" id="owner" name="owner" [(ngModel)]="owner">
+    </div>
+    <div class="counters">
+      <p>All tasks: <span id="all">{{todoService.Tasks.length}}</span></p>
+      <p>Done tasks: <span id="done">{{todoService.DoneCount}}</span></p>
+      <p>Not done tasks: <span id="undone">{{todoService.UnDoneCount}}</span></p>
+    </div>
+    <div class="container">
+
+      <app-todo-form [owner]="owner" [tempTaskIndex]="tempTaskIndex" [titleOfTask]="titleOfTask"></app-todo-form>
+
+    </div>
+  </div>
+</div>
